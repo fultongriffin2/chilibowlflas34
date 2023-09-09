@@ -15,7 +15,8 @@
     },
     "npm-install": {
       "name": "npm-install",
-      "command": "npm-install"
+      "command": "npm-install",
+      "runAtStart": true
     },
     "start": {
       "name": "start",
