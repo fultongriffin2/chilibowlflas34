@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chili Bowl Games - Modern Game Website</title>
+  <title>Sky-X - Modern Game Website</title>
   <style>
-   /* Reset some default styles */
+   
+/* Reset some default styles */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  cursor: url('custom-cursor.cur'), auto; /* Replace 'custom-cursor.cur' with your custom cursor image in .cur format */
 }
-
 /* Style the background image */
 #iframe-bg {
   position: fixed;
@@ -23,61 +24,127 @@ body, html {
   background-image: url('your-background-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixed background */
+  filter: blur(5px); /* Add a slight blur to the background */
 }
 
 /* Style the container */
 .container {
-  max-width: 100%; /* Adjust maximum width as needed */
+  max-width: 100%;
   margin: 0 auto;
   padding: 40px; /* Increase padding for a more spacious look */
-  background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque background */
-  border-radius: ; /* Increase border radius for a smoother appearance */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+  border-radius: ; /* Round the corners of the container */
 }
 
 /* Style headings */
 h1 {
   color: #fff;
-  font-size: 36px; /* Increase font size for a bold header */
-  margin-bottom: 30px; /* Add more spacing at the bottom */
+  font-size: 48px; /* Increase font size for a bold header */
+  margin-bottom: 20px; /* Add spacing at the bottom */
+  text-align: center; /* Center-align the header */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+}
+
+/* Create a grid layout for game cards */
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  gap: 20px; /* Space between game cards */
+  justify-items: center; /* Center-align the game cards horizontally */
 }
 
 /* Style game cards */
 .game-card {
-  background-color: #fff;
-  border: 2px solid #0077cc; /* Use a more prominent border */
-  border-radius: 12px; /* Round the corners */
+  background-color: #292b2c; /* Dark background */
+  border: 2px solid transparent; /* Transparent border */
   padding: 20px; /* Increase padding for content */
-  margin: 20px 0; /* More space between game cards */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px; /* Round the corners of game cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Add transitions for smooth effects */
+  margin: 20px;
 }
 
 .game-card:hover {
-  transform: scale(1.02); /* Slightly larger on hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Add a deeper shadow */
+  transform: scale(1.03); /* Slightly larger on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7); /* Add a deeper shadow */
+  border-color: #f0ad4e; /* Highlight border on hover */
+}
+
+/* Style game icons */
+.game-icon {
+  font-size: 48px; /* Adjust icon size as needed */
+  color: #f0ad4e; /* Highlight icon color */
+  margin-right: 10px; /* Space between icon and text */
 }
 
 /* Style links */
 .game-link {
-  color: #0077cc;
+  color: #f0ad4e; /* Highlight link color */
   text-decoration: none;
   font-weight: bold; /* Make links stand out */
+  transition: color 0.3s ease; /* Smooth link color transition */
 }
 
-/* Style the section headers */
+.game-link:hover {
+  color: #fff; /* Change link color on hover */
+}
+
+/* Style the section headers with title animation */
 .section-header {
-  color: #fff;
-  font-size: 28px; /* Slightly smaller section headers */
-  margin-top: 30px; /* More spacing at the top of section headers */
+  color: #f0ad4e;
+  font-size: 36px;
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px; /* Adjust the position of the line */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f0ad4e;
+  transform: scaleX(0); /* Initial state: no width */
+  transform-origin: right;
+  transition: transform 0.3s ease; /* Animate the line width */
+}
+
+.section-header:hover::after {
+  transform: scaleX(1); /* Expand the line on hover */
+  transform-origin: left;
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333; /* Track background color */
+  border-radius: 0; /* Rounded corners for track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f0ad4e; /* Thumb color */
+  border-radius: 10px; /* Rounded corners for thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff953f; /* Thumb color on hover */
 }
 
   </style>
 </head>
 <body>
+  
   <iframe id="iframe-bg" src=""></iframe>
 
   <div class="container">
-    <h1>Chili Bowl Games</h1>
+    <h1>Sky-X Games</h1>
     
     <div class="section-header">Flash Games</div>
     <div class="game-card">
