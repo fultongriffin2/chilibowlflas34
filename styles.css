@@ -1,39 +1,93 @@
-/* set global styles */
+/* Reset some default styles */
+body,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Set a background image or color for the body */
 body {
+  background-color: #f0f0f0; /* You can choose your preferred background color or image */
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  margin: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Style the navigation menu */
+nav {
+  background-color: #444;
+}
+
+nav ul {
   padding: 0;
-}
-
-/* style the links */
-a {
-  color: #00000;
-  text-decoration: none;
-  border: 1px solid #000;
-  background-color: transparent;
-  padding: 5px;
-  margin: 5px;
-  display: inline-block;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #f00;
-  border-color: #f00;
-  transform: scale(1.2);
-}
-
-/* center the page content */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
 }
 
-/* add spacing between links */
+nav li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f00;
+}
+
+/* Style the main content area */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Style links in the main content */
 .container a {
-  margin: 0 5px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.container a:hover {
+  color: #0056b3;
+}
+
+/* Style buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d30000;
+}
+
+/* Add spacing between elements */
+.container > * {
+  margin-bottom: 20px;
 }
